@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SEBNF",
+	"patterns": [
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.new.sebnf",
+					"match": "\\+|\\*|\\?|\\="
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"begin": "#",
+					"end": "\\n"
+				},
+				{
+					"name": "comment.block",
+					"begin": ":",
+					"end": ";"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.sebnf",
+			"begin": "\"",
+			"end": "\""
+		}
+	},
+	"scopeName": "source.sebnf"
+}
